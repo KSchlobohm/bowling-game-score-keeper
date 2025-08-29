@@ -6,6 +6,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingGame", "BowlingGame\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingGame.Specs", "BowlingGame.Specs\BowlingGame.Specs.csproj", "{C2C7E23F-3B17-4C9E-BB95-22A3A9BAF539}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "upgrades", "upgrades", "{65E99F22-D8B8-4811-BCB4-0B7D219C9A7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prompts", "prompts", "{D145F940-AC02-4DCE-BEA0-3AEBCF347F82}"
+	ProjectSection(SolutionItems) = preProject
+		.github\upgrades\prompts\custom_prompt_migrate_specflow_to_reqnroll.md = .github\upgrades\prompts\custom_prompt_migrate_specflow_to_reqnroll.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,5 +32,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{65E99F22-D8B8-4811-BCB4-0B7D219C9A7E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{D145F940-AC02-4DCE-BEA0-3AEBCF347F82} = {65E99F22-D8B8-4811-BCB4-0B7D219C9A7E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66CAF828-FC07-41B7-9F71-8AD4ADDE9D9B}
 	EndGlobalSection
 EndGlobal
