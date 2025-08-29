@@ -15,6 +15,9 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <!-- Reqnroll packages for SpecFlow to Reqnroll migration using compatibility path -->
+    <PackageReference Include="Reqnroll.xUnit" Version="2.1.0" />
+    <PackageReference Include="Reqnroll.SpecFlowCompatibility" Version="2.1.0" />
   </ItemGroup>
   <ItemGroup>
     <!-- Ensure no checked-in feature code-behind is compiled -->
