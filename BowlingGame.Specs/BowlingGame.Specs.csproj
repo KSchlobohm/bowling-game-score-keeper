@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <IsPackable>false</IsPackable>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -9,18 +9,20 @@
     <ProjectReference Include="..\BowlingGame\BowlingGame.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="SpecFlow" Version="3.9.74" />
-    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.74" />
-    <PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
-    <!--<PackageReference Include="SpecFlow.xUnit" Version="4.9.60" />-->
-    <PackageReference Include="xunit" Version="2.9.3" />
-    <!--<PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="4.9.60" />-->
-    
-    <!-- Added missing test discovery/execution packages -->
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.8">
+    <PackageReference Include="SpecFlow" Version="3.9.8" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.8" PrivateAssets="all" />
+    <PackageReference Include="SpecFlow.xUnit" Version="3.9.8" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Ensure no checked-in feature code-behind is compiled -->
+    <Compile Remove="**/*.feature.cs" />
+    <!-- Explicitly mark feature files (build-time generation will pick these up) -->
+    <None Include="**/*.feature" />
   </ItemGroup>
 </Project>
